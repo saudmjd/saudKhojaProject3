@@ -4,7 +4,7 @@ let $close = $('<i class="fas fa-times"></i>');
 
 // HTML stuff
 $('section').append($overlay);   // Add overlay to DOM
-$overlay.hide();   // Hide overlay
+$overlay.fadeOut();   // Hide overlay
 
 // When user clicks on image
 $('.lightbox img').click(function(){
@@ -13,12 +13,12 @@ $('.lightbox img').click(function(){
 	$overlay.append($image);   // Add img to overlay
 	$overlay.append($close);   // Add close button to overlay
 	$image.attr('src', imageUrl);   // Add img attribute
-	$overlay.show();   // Show overlay
-  $image.show();   // Show img
-  $close.show();   // Close overlay
+	$overlay.fadeIn('2000');   // Show overlay
+	$image.fadeIn('2000');   // Show img
+	$close.show('2000');   // Close overlay
 });
 
 // Close overlay when X clicked
 $close.click( function() {
-	$overlay.hide();
+	$overlay.fadeOut('2000');
 } );
