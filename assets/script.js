@@ -15,7 +15,7 @@ $('.lightbox img').click(function(){
 	$image.attr('src', imageUrl);   // Add img attribute
 	$overlay.fadeIn('2000');   // Show overlay
 	$image.fadeIn('2000');   // Show img
-	$close.show('2000');   // Close overlay
+	$close.show();   // Close overlay
 });
 
 // Close overlay when X clicked
